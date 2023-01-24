@@ -69,6 +69,7 @@ tags
 # Persistent undo
 [._]*.un~
 
+autoload/
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db

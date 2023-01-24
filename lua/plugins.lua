@@ -13,35 +13,33 @@ packer.startup(function(use)
   use "morhetz/gruvbox"
   use 'folke/tokyonight.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
+
+  use 'nvim-tree/nvim-web-devicons'
+
   -- lualine
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'nvim-lualine/lualine.nvim'
   use {
     'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
-    },
-    -- using packer.nvim
-    use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'},
-    use "lukas-reineke/indent-blankline.nvim",
-    use {"akinsho/toggleterm.nvim"},
-    use 'tpope/vim-fugitive',
-    use 'editorconfig/editorconfig-vim',
+  }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  -- using packer.nvim
+  use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
+  use "lukas-reineke/indent-blankline.nvim"
+  use {"akinsho/toggleterm.nvim"}
+  use 'tpope/vim-fugitive'
+  use 'editorconfig/editorconfig-vim'
    -- use {
     --  'nvim-treesitter/nvim-treesitter',
     -- },
    -- use {
     --  'numToStr/Comment.nvim'
     --},
-  }
+  
 end)
-
+require("plugins/nvim-web-devicons")
 require("plugins/lualine")
 require("plugins/nvim-tree")
 require("plugins/telescope-nvim")
