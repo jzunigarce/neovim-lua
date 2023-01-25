@@ -21,3 +21,6 @@ map('n', '<C-P>', ':Telescope find_files<CR>')
 map('n', '<C-G>', ':Telescope live_grep<CR>')
 map('n', '<C-B>', ':Telescopelescope builtinffers<CR>')
 map('n', '<C-S-G>', ':Telescope grep_string<CR>')
+
+-- toogleterm-nvim
+map('', '<C-t>', ':ToggleTerm<CR>')
