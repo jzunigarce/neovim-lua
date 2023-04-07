@@ -55,6 +55,10 @@ packer.startup(function(use)
     }
   }
   use "windwp/nvim-autopairs"
+  use {
+     "folke/trouble.nvim",
+     requires = "nvim-tree/nvim-web-devicons",
+  }
 end)
 
 require("plugins/nvim-web-devicons")
@@ -67,3 +71,4 @@ require("plugins/editorconfig")
 require("plugins/toogleterm-nvim")
 require("plugins/lsp-zero-nvim")
 require("plugins/windwp-nvim-autopairs")
+require("plugins/trouble-nvim")

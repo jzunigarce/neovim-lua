@@ -24,3 +24,11 @@ map('n', '<C-S-G>', ':Telescope grep_string<CR>')
 
 -- toogleterm-nvim
 map('', '<C-t>', ':ToggleTerm<CR>')
+
+--Troueble Diagnostic
+map('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
+map('n', '<leader>dd', '<cmd>TroubleToggle workspace_diagnostics<cr>', {silent = true, noremap = true})
+-- map('n', '<leader>d[', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
+-- map('n', '<leader>d]', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
+-- The following command requires plug-ins "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", and optionally "kyazdani42/nvim-web-devicons" for icon support
+map('n', '<leader>td', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
