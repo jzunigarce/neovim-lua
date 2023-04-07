@@ -32,12 +32,6 @@ packer.startup(function(use)
   use 'tpope/vim-fugitive'
   use 'editorconfig/editorconfig-vim'
 
-   -- use {
-    --  'nvim-treesitter/nvim-treesitter',
-    -- },
-   -- use {
-    --  'numToStr/Comment.nvim'
-    --},
   -- LSP server
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -60,6 +54,7 @@ packer.startup(function(use)
       {'rafamadriz/friendly-snippets'},
     }
   }
+  use "windwp/nvim-autopairs"
 end)
 
 require("plugins/nvim-web-devicons")
@@ -71,6 +66,4 @@ require("plugins/indent-blankline")
 require("plugins/editorconfig")
 require("plugins/toogleterm-nvim")
 require("plugins/lsp-zero-nvim")
-
--- require("plugins/treesitter-nvim")
--- require("plugins/comment")
+require("plugins/windwp-nvim-autopairs")
