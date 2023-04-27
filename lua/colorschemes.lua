@@ -10,10 +10,11 @@ M.colorschemes = {
 	tokyonight_storm = 'tokyonight-storm',
 	tokyonight_day = 'tokyonight-day',
 	tokyonight_moon = 'tokyonight-moon',
+  gruvbox = 'gruvbox',
 }
 
 M.set_colorschema = function(scheme)
 	require("themes/" .. M.colorschemes[scheme])
 end
 
-M.set_colorschema('tokyonight')
+M.set_colorschema('gruvbox')
