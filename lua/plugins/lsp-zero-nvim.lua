@@ -24,7 +24,6 @@ lsp.configure('tsserver', {
 -- see :help lsp-zero.setup_servers()
 lsp.setup_servers({
   'eslint',
-  'angularls',
   opts = {
     single_file_support = false,
     on_attach = function(client, bufnr)
