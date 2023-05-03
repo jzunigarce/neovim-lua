@@ -13,6 +13,10 @@ function map(mode, lhs, rhs, opts)
 end
 
 map('n', 'Y', 'yy')
+-- Duplicate line
+map('n', '<Leader>d', ':copy .<CR>')
+-- List buffer and require id to open
+map('n', '<Leader>b', ':buffers<CR>:buffer<Space>')
 -- neovim-tree
 map('', '<F2>', ':NvimTreeToggle<CR>') -- Toogle tree
 

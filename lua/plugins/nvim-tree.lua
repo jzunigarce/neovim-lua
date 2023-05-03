@@ -32,6 +32,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', '<Tab>', api.node.open.preview, opts('Open Preview'))
   vim.keymap.set('n', '<BS>', api.node.navigate.parent_close, opts('Close Directory'))
   vim.keymap.set('n', 'a', api.fs.create, opts('Create'))
+  vim.keymap.set('n', '<C-e>', api.node.open.replace_tree_buffer, opts('Open: In Place'))
+  vim.keymap.set('n', 'O', api.node.open.no_window_picker, opts('Open: No Window Picker'))
 end
 
 require("nvim-tree").setup({
