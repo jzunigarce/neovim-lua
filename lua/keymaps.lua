@@ -36,3 +36,6 @@ map('n', '<leader>dd', '<cmd>TroubleToggle workspace_diagnostics<cr>', {silent =
 -- map('n', '<leader>d]', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 -- The following command requires plug-ins "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", and optionally "kyazdani42/nvim-web-devicons" for icon support
 map('n', '<leader>td', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
+
+-- Vim fugitive
+map('n', '<leader>g', ':G<space>')
