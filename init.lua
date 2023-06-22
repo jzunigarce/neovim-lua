@@ -3,4 +3,5 @@ require("settings")
 require("keymaps")
 
 require("plugins")
-require("colorschemes")
+require("colorschemes").set_colorscheme('gruvbox')
+

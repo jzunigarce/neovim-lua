@@ -1,6 +1,7 @@
 -- Config colorschemes
+local cmd = vim.cmd
+local opt = vim.opt
 local M = {}
-local default_scheme = require('default-scheme')
 
 M.colorschemes = {
 	dracula = 'dracula',
@@ -14,11 +15,11 @@ M.colorschemes = {
   catppuccin_latte = 'catppuccin-latte'
 }
 
-M.set_colorscheme = function(theme)
-  print(theme)
-  default_scheme.set_colorscheme(theme)
-	--require("lua/themes/" .. M.colorschemes[scheme])
+M.set_colorscheme = function(scheme)
+  print(scheme)
+	require("lua/themes/" .. M.colorschemes[scheme])
 end
 
+M.set_colorscheme('catppuccin')
 
 return M
