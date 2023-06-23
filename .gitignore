@@ -100,3 +100,6 @@ $RECYCLE.BIN/
 
 # Neovim plugin directory
 plugin/
+
+# Custom config file
+custom.lua
