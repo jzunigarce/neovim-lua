@@ -1,6 +1,6 @@
 -- Config colorschemes
 local M = {}
-local default_scheme = require('default-scheme')
+local default_scheme = require('themes.default-scheme')
 
 M.colorschemes = {
 	dracula = 'dracula',
@@ -15,8 +15,8 @@ M.colorschemes = {
 }
 
 M.set_colorscheme = function(theme)
-  print(theme)
-  default_scheme.set_colorscheme(theme)
+ print(theme)
+ default_scheme.set_colorscheme(M.colorschemes[theme])
 	--require("lua/themes/" .. M.colorschemes[scheme])
 end
 

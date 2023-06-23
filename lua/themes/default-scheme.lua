@@ -4,7 +4,6 @@ local opt = vim.opt
 local Default_Scheme = {}
 
 Default_Scheme.set_colorscheme = function(theme)
-  print("Theme" .. theme)
   opt.termguicolors = true
   cmd('colorscheme ' .. theme)
 end
