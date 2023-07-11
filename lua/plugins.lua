@@ -59,6 +59,10 @@ packer.startup(function(use)
      "folke/trouble.nvim",
      requires = "nvim-tree/nvim-web-devicons",
   }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 end)
 
 require("plugins/nvim-web-devicons")
@@ -72,3 +76,4 @@ require("plugins/toogleterm-nvim")
 require("plugins/lsp-zero-nvim")
 require("plugins/windwp-nvim-autopairs")
 require("plugins/trouble-nvim")
+require("plugins/treesitter-nvim")

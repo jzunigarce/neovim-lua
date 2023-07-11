@@ -27,7 +27,6 @@ lsp.setup_servers({
   opts = {
     single_file_support = false,
     on_attach = function(client, bufnr)
-      print("I'm doing web dev")
     end
   }
 })
@@ -43,6 +42,5 @@ lsp.setup()
 local rust_lsp = lsp.build_options('rust_analyzer', {
   single_file_support = false,
   on_attach = function(client, bufnr)
-    print('hello rust-tools')
   end
 })
