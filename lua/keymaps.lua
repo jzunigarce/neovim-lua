@@ -39,3 +39,6 @@ map('n', '<leader>td', '<cmd>Telescope diagnostics<CR>', { noremap = true, silen
 
 -- Vim fugitive
 map('n', '<leader>g', ':G<space>')
+
+-- Lazy git
+map('n', '<leader>g', '<cmd>lua _lazygit_toggle()<CR>', { silent = true })
