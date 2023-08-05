@@ -41,4 +41,4 @@ map('n', '<leader>td', '<cmd>Telescope diagnostics<CR>', { noremap = true, silen
 map('n', '<leader>g', ':G<space>')
 
 -- Lazy git
-map('n', '<leader>g', '<cmd>lua _lazygit_toggle()<CR>', { silent = true })
+map('n', '<C-L>', '<cmd>lua _lazygit_toggle()<CR>', { silent = true })
