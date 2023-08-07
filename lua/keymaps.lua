@@ -42,3 +42,7 @@ map('n', '<leader>g', ':G<space>')
 
 -- Lazy git
 map('n', '<leader>g', '<cmd>lua _lazygit_toggle()<CR>', { silent = true })
+ 
+-- Exit terminal 
+map('t', '<Esc>', '<C-\\><C-n>') 
+
