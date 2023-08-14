@@ -44,4 +44,4 @@ map('n', '<leader>g', ':G<space>')
 map('n', '<C-L>', '<cmd>lua _lazygit_toggle()<CR>', { silent = true })
  
 -- Exit terminal 
-map('t', '<Esc>', '<C-\\><C-n>') 
+map('t', '<C-w>h', '<C-\\><C-n>') 
