@@ -1,5 +1,5 @@
 require('toggleterm').setup({
-  direction = 'horizontal',
+  direction = 'float',
   shade_terminals = true
 })
 
