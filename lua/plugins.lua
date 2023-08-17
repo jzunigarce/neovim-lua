@@ -63,6 +63,9 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use {
+    "folke/zen-mode.nvim"
+  }
 end)
 
 require("plugins/nvim-web-devicons")
