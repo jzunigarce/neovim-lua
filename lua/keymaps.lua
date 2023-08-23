@@ -27,7 +27,11 @@ map('n', '<C-B>', ':Telescopelescope builtinffers<CR>')
 map('n', '<C-S-G>', ':Telescope grep_string<CR>')
 
 -- toogleterm-nvim
-map('', '<C-t>', ':ToggleTerm<CR>')
+map('', '<C-t>', ':ToggleTerm direction=float<CR>')
+map('', '<C-t>h', ':ToggleTerm direction=horizontal<CR>')
+map('t', '<C-w>h', '<C-\\><C-n>')
+map('n', '<C-t>n', '<cmd>lua _node_toggle()<CR>', { silent = true})
+map('n', '<C-t>p', '<cmd>lua _python_toggle()<CR>', { silent = true })
 
 --Troueble Diagnostic
 map('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
@@ -41,7 +45,5 @@ map('n', '<leader>td', '<cmd>Telescope diagnostics<CR>', { noremap = true, silen
 map('n', '<leader>g', ':G<space>')
 
 -- Lazy git
-map('n', '<C-L>', '<cmd>lua _lazygit_toggle()<CR>', { silent = true })
- 
--- Exit terminal 
-map('t', '<C-w>h', '<C-\\><C-n>') 
+map('n', '<C-L>', '<cmd>lua _lazygit_toggle()<CR>', { silent = true }) 
+
