@@ -6,6 +6,7 @@ lsp.ensure_installed({
   'tsserver',
   'eslint',
   'lua_ls',
+  'html',
 })
 
 
@@ -31,6 +32,12 @@ lsp.setup_servers({
   }
 })
 
+lsp.setup_servers({
+  'html',
+  opts = {
+    filetypes = {"html"}
+  }
+})
 -- configure lua language server for neovim
 -- see :help lsp-zero.nvim_workspace()
 lsp.nvim_workspace()
