@@ -51,3 +51,10 @@ local rust_lsp = lsp.build_options('rust_analyzer', {
   on_attach = function(client, bufnr)
   end
 })
+
+lsp.setup_servers({
+  'pyright',
+  opts={
+    on_attach = on_attach,settings = {pyright = {autoImportCompletion = true,},
+    python = {analysis = {autoSearchPaths = true,diagnosticMode = 'openFilesOnly',useLibraryCodeForTypes = true,typeCheckingMode = 'off'}}}}
+})
