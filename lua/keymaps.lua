@@ -13,6 +13,8 @@ function map(mode, lhs, rhs, opts)
 end
 
 map('n', 'Y', 'yy')
+-- Copy to clipboard
+map('', '<Leader>yy', '"+y')
 -- Duplicate line
 map('n', '<Leader>d', ':copy .<CR>')
 -- List buffer and require id to open

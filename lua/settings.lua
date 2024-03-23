@@ -8,9 +8,9 @@ local opt = vim.opt
 -- UI
 opt.title = true
 opt.number = true
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.softtabstop = 0
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.softtabstop = 4
 opt.expandtab = true
 opt.cursorline = true
 opt.mouse = "a"
