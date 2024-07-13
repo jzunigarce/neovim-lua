@@ -3,17 +3,18 @@ lsp.preset('recommended')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
+    ensure_installed ={
+    'tsserver',
+    'eslint',
+    'lua_ls',
+    'html',
+    },
   handlers = {
     lsp.default_setup,
   },
 })
 
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'lua_ls',
-  'html',
-})
+
 
 
 lsp.configure('tsserver', {
@@ -46,7 +47,8 @@ lsp.setup_servers({
 })
 -- configure lua language server for neovim
 -- see :help lsp-zero.nvim_workspace()
-lsp.nvim_workspace()
+-- lsp.nvim_workspace()
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
