@@ -37,10 +37,10 @@ packer.startup(function(use)
     'VonHeikemen/lsp-zero.nvim',
     requires = {
       -- Soporte LSP
-      {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
 
+      {'neovim/nvim-lspconfig'},
       -- Autocompletado
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
