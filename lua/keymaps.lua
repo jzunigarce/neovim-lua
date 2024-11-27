@@ -18,7 +18,7 @@ map('', '<Leader>yy', '"+y')
 -- Duplicate line
 map('n', '<Leader>d', ':copy .<CR>')
 -- List buffer and require id to open
-map('n', '<Leader>b', ':buffers<CR>:buffer<Space>')
+map('n', '<Leader>bl', ':buffers<CR>:buffer<Space>', { noremap = true, silent = true })
 -- neovim-tree
 map('', '<F2>', ':NvimTreeToggle<CR>') -- Toogle tree
 
@@ -49,3 +49,6 @@ map('n', '<leader>g', ':G<space>')
 -- Lazy git
 map('n', '<C-L>', '<cmd>lua _lazygit_toggle()<CR>', { silent = true }) 
 
+-- move buffer 
+map('n', '<leader>bn', ':bn<CR>', { noremap = true, silent = true })
+map('n', '<leader>bp', ':bp<CR>', { noremap = true, silent = true })
