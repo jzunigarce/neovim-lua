@@ -89,7 +89,7 @@ lsp.setup_servers({
 -- configure lua language server for neovim
 -- see :help lsp-zero.nvim_workspace()
 -- lsp.nvim_workspace()
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').lua_ls.setup({})
 
 lsp.setup()
 
