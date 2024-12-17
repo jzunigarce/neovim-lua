@@ -1,7 +1,8 @@
 -- Settings
+local utils = require("utils")
 require("settings")
 require("keymaps")
 
 require("plugins")
 require("colorschemes").set_colorscheme('dracula')
-require("custom")
+utils.load_module("custom")

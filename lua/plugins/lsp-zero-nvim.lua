@@ -10,8 +10,8 @@ require('mason-lspconfig').setup({
     'eslint',
     'lua_ls',
     'html',
-    'eslint',
     'emmet_ls',
+    'pyright',
     },
   handlers = {
     lsp.default_setup,
@@ -27,7 +27,12 @@ cmp.setup({
     preselect = 'item',
     completion = {
         completeopt = 'menu,menuone,noinsert'
-    }
+    },
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'buffer' },
+        { name = 'path' },
+    },
 })
 
 require('lspconfig').emmet_language_server.setup({
@@ -79,27 +84,25 @@ lsp.setup_servers({
   }
 })
 
-lsp.setup_servers({
-  'html',
-  opts = {
-    filetypes = {"html"}
-  }
-})
+-- lsp.setup_servers({
+--  'html',
+--  opts = {
+--    filetypes = {"html"}
+--  }
+-- })
 
 -- configure lua language server for neovim
 -- see :help lsp-zero.nvim_workspace()
 -- lsp.nvim_workspace()
 require('lspconfig').lua_ls.setup({})
 
-lsp.setup()
 
 -- initialize rust_analyzer with rust-tools
--- see :help lsp-zero.build_options()
-local rust_lsp = lsp.build_options('rust_analyzer', {
-  single_file_support = false,
-  on_attach = function(client, bufnr)
-  end
-})
+-- local rust_lsp = lsp.build_options('rust_analyzer', {
+--  single_file_support = false,
+--  on_attach = function(client, bufnr)
+--  end
+-- })
 
 lsp.setup_servers({
   'pyright',
@@ -107,3 +110,5 @@ lsp.setup_servers({
     on_attach = on_attach,settings = {pyright = {autoImportCompletion = true,},
     python = {analysis = {autoSearchPaths = true,diagnosticMode = 'openFilesOnly',useLibraryCodeForTypes = true,typeCheckingMode = 'off'}}}}
 })
+
+lsp.setup()
