@@ -1,12 +1,12 @@
 local lsp = require('lsp-zero')
 require('lspconfig').intelephense.setup({})
 
-lsp.preset('recommended')
+-- lsp.preset('recommended')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed ={
-    'tsserver',
+    'ts_ls',
     'eslint',
     'lua_ls',
     'html',
@@ -62,9 +62,9 @@ require('lspconfig').emmet_language_server.setup({
 })
 
 
-lsp.configure('tsserver', {
+lsp.configure('ts_ls', {
   on_attach = function(client, bufnr)
-    print('Tsserver')
+    print('ts_ls')
   end,
   settings = {
     completions = {
