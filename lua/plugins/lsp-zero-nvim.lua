@@ -60,16 +60,6 @@ lspconfig.emmet_ls.setup({
 })
 
 
---[[ lsp.configure('ts_ls', {
-  on_attach = function(client, bufnr)
-    print('ts_ls')
-  end,
-  settings = {
-    completions = {
-      completeFunctionCalls = true
-    }
-  }
-})]]
 lspconfig["ts_ls"].setup({ capabilities = capabilities })
 
 -- share configuration between multiple servers
@@ -83,12 +73,6 @@ lsp.setup_servers({
     }
 })
 
--- lsp.setup_servers({
---  'html',
---  opts = {
---    filetypes = {"html"}
---  }
--- })
 
 -- configure lua language server for neovim
 -- see :help lsp-zero.nvim_workspace()

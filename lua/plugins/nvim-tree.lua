@@ -39,6 +39,12 @@ end
 
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
+    sync_root_with_cwd = true,
+    respect_buf_cwd = true,
+    update_focused_file = { -- Actualiza el archivo enfocado
+        enable = true,
+        update_cwd = true,
+    },
     view = {
         adaptive_size = true,
         --mappings = {
@@ -75,4 +81,12 @@ local function open_nvim_tree()
     api.tree.open()
 end
 
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = function() open_nvim_tree() end })
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+    callback = function()
+        -- local path = vim.fn.getcwd() -- Obtiene el directorio actual
+        -- if vim.fn.isdirectory(vim.fn.getcwd()) == 1 then
+        --open_nvim_tree()
+        --end
+        open_nvim_tree()
+    end
+})
