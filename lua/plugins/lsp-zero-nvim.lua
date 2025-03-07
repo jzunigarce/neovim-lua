@@ -3,6 +3,19 @@ local lspconfig = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+lspconfig.html.setup {
+    capabilities = capabilities,
+    filetypes = { "html", "blade" },
+    init_options = {
+        configurationSection = { "html", "css", "javascript" },
+        embeddedLanguages = {
+            css = true,
+            javascript = true
+        },
+        provideFormatter = true
+    }
+}
+
 lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
     lsp.buffer_autoformat()
