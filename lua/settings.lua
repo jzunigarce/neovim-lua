@@ -24,6 +24,8 @@ opt.ignorecase = true
 opt.laststatus = 2
 opt.showmode = false
 
+
+g.prettier_autoformat = 1
 -- Load vim sessions
 api.nvim_create_augroup("AutoLoadSession", { clear = true })
 api.nvim_create_autocmd("VimEnter", {

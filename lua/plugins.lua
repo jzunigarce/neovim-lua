@@ -67,6 +67,7 @@ packer.startup(function(use)
     use {
         "folke/zen-mode.nvim"
     }
+    use { 'prettier/vim-prettier', run = 'npm install' }
 end)
 
 require("plugins/nvim-web-devicons")
@@ -81,3 +82,4 @@ require("plugins/lsp-zero-nvim")
 require("plugins/windwp-nvim-autopairs")
 require("plugins/trouble-nvim")
 require("plugins/treesitter-nvim")
+require("plugins/vue-template")

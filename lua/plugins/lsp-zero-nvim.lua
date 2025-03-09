@@ -72,8 +72,35 @@ lspconfig.emmet_ls.setup({
     }
 })
 
+lspconfig.volar.setup({
+    settings = {
+        vue = {
+            format = {
+                enable = false
+            }
+        }
+    },
+    filetypes = { 'vue' },
+    on_attach = function(client, bufnr)
+        local opts = {}
+    end,
+})
 
-lspconfig["ts_ls"].setup({ capabilities = capabilities })
+-- lspconfig["ts_ls"].setup({ capabilities = capabilities })
+lspconfig["ts_ls"].setup({
+    capabilities = capabilities,
+    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+    init_options = {
+        plugins = {
+            {
+                name = '@vue/typescript-plugin',
+                location = vim.fn.stdpath('data') ..
+                    '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                languages = { 'vue' },
+            },
+        },
+    },
+})
 
 -- share configuration between multiple servers
 -- see :help lsp-zero.setup_servers()
